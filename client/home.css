@@ -1,0 +1,375 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; /* Peso médio */
+    font-style: normal;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #e9ecef;
+}
+
+.menu-hamburguer {
+    width: 250px;
+    background-color: #ffffff;
+    color: black;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
+    /*margin: 10px 10px 30px 10px;*/
+    border-top-right-radius: 15px;
+    /*border-top-right-radius: 15px;*/
+    border-bottom-right-radius: 15px;
+}
+
+.menu-hamburguer.active {
+    transform: translateX(0);
+}
+
+.user-info {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.user-name {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.user-email {
+    font-size: 14px;
+    color: grey;
+}
+
+.menu-options ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-options li {
+    padding: 15px 20px;
+}
+
+.menu-options a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+/*.menu-options a:hover {
+    background-color: #575757;
+}*/
+
+.content {
+    flex-grow: 1;
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.menu-hamburguer:not(.active) + .content {
+    margin-left: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+#menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 20;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    display: none;
+}
+
+section.active-section {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    /*flex: 1 0 calc(33.33% - 20px);*/
+    margin: 10px; /* Adicione margens para espaço entre os itens */
+}
+
+#config-form {
+    /*display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;*/
+    margin: 0px 100px 0px 100px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"] {
+    padding: 15px;
+    border: none; /* Remover a borda */
+    margin-bottom: 20px;
+    margin-top: 5px;
+    transition: all linear 160ms;
+    outline: none;
+    box-sizing: border-box;
+    background-color: #e9ecef; /* Cor de fundo do input mais claro */
+    color: #495057; /* Cor do texto dentro do input */
+    height: 40px; /* Altura do campo de entrada */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 10px;
+}
+
+.fletbox-type {
+    display: flexbox;
+}
+
+.btn, .btn-destructive {
+    width: 150px; /* Largura do botão */
+    padding: 10px;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all linear 160ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background-color: #0057CC;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #1778FB;
+}
+
+.btn-destructive {
+    background-color: #a20202;
+}
+
+.btn-destructive:hover {
+    transform: scale(1.05);
+    background-color: #bb0b0b;
+}
+
+.container {
+    max-width: 100%;
+    /*background: #fff;*/
+    text-align: center;
+    padding: 10px;
+}
+
+.card {
+    transition: all linear 160ms;
+    margin: 20px 0px 0px 20px;
+    max-width: 35%;
+    min-width: 25%;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para a imagem dentro dos cards */
+.card img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para o título dentro dos cards */
+.card h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Estilos para os parágrafos dentro dos cards */
+.card p {
+    margin: 5px 0 0;
+    color: #555;
+}
+
+/* Estilos para o efeito hover nos cards */
+.card:hover {
+    transform: scale(1.3);
+}
+
+/* Estilos específicos para cards do tipo game */
+.card.game {
+    /* Estilos específicos aqui */
+}
+
+/* Estilos específicos para cards do tipo user */
+.card.user {
+    /* Estilos específicos aqui */
+}
+
+.cont-page-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cont-page-grid a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: left;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -150px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext h3 {
+    margin: 0;
+}
+
+.tooltip .tooltiptext p {
+    margin: 10px 0;
+}
+
+.tooltip .tooltiptext button {
+    margin-right: 10px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.character-card {
+    transition: all linear 160ms;
+    margin: 20px 0px 0px 20px;
+    max-width: 35%;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Adicionado para alinhar os itens verticalmente */
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.character-card div {
+    text-align: left;
+}
+.character-card h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+.character-card p {
+    margin: 5px 0 0;
+    color: #555;
+}
+
+#logosysroot {
+    width: 200px;  /* ou qualquer outro valor que você deseja */
+}
+
+.separador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.se-img {
+    margin-right: 20px;
+}
+
+.game-title h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.game-data {
+    /* Espaço para estilos adicionais relacionados aos dados do jogo */
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    .content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .menu-hamburguer {
+        width: 100%;
+        transform: translateX(-100%);
+    }
+
+    .menu-hamburguer.active {
+        transform: translateX(0);
+    }
+
+    header {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #menu-toggle {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .card {
+        max-width: 80%;
+        min-width: 80%;
+    }
+}
