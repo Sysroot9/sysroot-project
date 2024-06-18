@@ -1,0 +1,37 @@
+{
+	"0_0_specialAttack": {
+
+        	"1": {
+            		"pergunta": "Usar sua habilidade de combate?",
+            		"alternativas": {
+            		
+                		"a": {
+                    			"texto": "Sim",
+                    			"valor": 5
+                		},
+                		
+				"b": {
+					"texto": "Não",
+					"valor": 0
+				}
+            		}
+        	},
+
+        	"2": {
+           		"pergunta": "Há um porco selvagem atacando vocês!!! O que você faz?",
+            		"alternativas": {
+            		
+				"a": {
+					"texto": "Fugir",
+				    	"valor": 0
+				},
+				
+				"b": {
+				    	"texto": "Atacar",
+				    	"valor": 3
+				}
+		    	}
+		}
+    	}
+}
+
