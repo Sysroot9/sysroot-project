@@ -1,8 +1,0 @@
-{
-	"estado-atual(numero)_id-jogador(ou id-global)_tipo-de-evento": {
-		"numero-pergunta": "texto-pergunta",
-		"pergunta_numero-alternativa": "texto-alternativa",
-		"*": "*"
-	}
-
-}
