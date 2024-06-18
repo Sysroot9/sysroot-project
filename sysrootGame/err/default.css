@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500; /* Peso médio */
+    font-style: normal;
+}
+
+.separador {
+    display: flex; /* Ativa o Flexbox */
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    gap: 20px; /* Espaço entre os itens */
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.container {
+    flex: 1; /* Cada container ocupa uma parte igual do espaço disponível */
+    box-sizing: border-box; /* Inclui o padding e border no cálculo da largura */
+    margin: 30px;
+}
+
+.text-container {
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.image-container {
+    display: flex; /* Flexbox para alinhar a imagem */
+    justify-content: flex-end; /* Alinha a imagem à direita */
+}
+
+.image {
+    max-width: 80%; /* Faz com que a imagem seja responsiva */
+    height: auto; /* Mantém a proporção da imagem */
+    width: 500px; /* Defina o tamanho da imagem */
+    animation: rotateImage 10s infinite linear; /* Define a animação */
+    transform-style: preserve-3d; /* Mantém a transformação 3D para os filhos */
+}
+
+.btn {
+    width: calc(100%); /* Largura do botão */
+    padding: 10px;
+    background-color: #0057CC;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 2px;
+    font-size: 14px ;
+    font-weight: 600;
+    transition: all linear 160ms;
+    align-items: center;
+    max-width: 50%;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #1778FB;
+}
+
+@keyframes rotateImage {
+    from {
+        transform: rotateY(0deg); /* Começa a rotação em 0 graus */
+    }
+    to {
+        transform: rotateY(360deg); /* Completa uma volta em 360 graus */
+    }
+}
+
+@media (max-width: 600px) {
+    
+    .separador {
+        display: block; /* Ativa o Flexbox */
+        align-items: center; /* Alinha verticalmente ao centro */
+        justify-content: space-between; /* Espaça os itens igualmente */
+        gap: 20px; /* Espaço entre os itens */
+        padding: 20px;
+        background-color: #f0f0f0;
+    }
+
+    .image {
+        max-width: 100%; /* Faz com que a imagem seja responsiva */
+        height: auto; /* Mantém a proporção da imagem */
+        width: 100%; /* Defina o tamanho da imagem */
+        animation: rotateImage 10s infinite linear; /* Define a animação */
+        transform-style: preserve-3d; /* Mantém a transformação 3D para os filhos */
+    }
+
+    .container {
+        box-sizing: border-box; /* Inclui o padding e border no cálculo da largura */
+        margin: 0px 0px 20px 0px;
+    }
+
+}
